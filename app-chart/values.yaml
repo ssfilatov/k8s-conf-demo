@@ -1,0 +1,27 @@
+# Default values for demo.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+namespace: default
+
+image:
+  repository: sfilatov/myapp
+  tag: v0.0.4
+  pullPolicy: Always
+
+service:
+  type: NodePort
+
+app:
+  port: 8082
+  healthEndpoint: /handler
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
